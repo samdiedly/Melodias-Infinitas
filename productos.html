@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos reutilizados */
+
+        /* Cabecera */
+        header {
+            background-color: #1e3a8a;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header img {
+            height: 40px; /* Logo en pequeño */
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #374151;
+        }
+
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .section-title {
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding: 1rem 0;
+            scrollbar-width: none; /* Oculta scrollbar en Firefox */
+        }
+        .carousel::-webkit-scrollbar {
+            display: none; /* Oculta scrollbar en Chrome */
+        }
+        .album {
+            flex: 0 0 auto;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .album:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .album img {
+            width: 100%;
+        }
+        .album-details {
+            padding: 1rem;
+            text-align: center;
+        }
+        .album-details h3 {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            color: #1e3a8a;
+        }
+        .album-details p {
+            margin: 0;
+            color: #374151;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #1e3a8a;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        
+        footer {
+            background-color: #1e293b;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        footer .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        footer .socials a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        footer .socials a:hover {
+            color: #60a5fa;
+        }
+
+        
+      
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+    </div>
+    <header>
+        <h1>
+            <a href="trabajo3.html">
+                <img src="logo2.jpeg" alt="Logo de Melodías Infinitas">
+            </a>
+            Melodías Infinitas
+        </h1>
+        <nav>
+            <a href="trabajo3.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    
+    
+    <div class="container">
+        <h1 class="section-title">Productos</h1>
+
+        <div>
+            <h2 class="section-title">Rock</h2>
+            <div class="carousel">
+                <div class="album">
+                    <img src="iron maiden.jpg" alt="Portada album Iron Maiden">
+                    <div class="album-details">
+                        <h3>Iron Maiden</h3>
+                        <p>€18.99</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="europe.jpg" alt="Portada album Europe">
+                    <div class="album-details">
+                        <h3>Europe</h3>
+                        <p>€17.99</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="kiss.jpg" alt="Portada album Kiss">
+                    <div class="album-details">
+                        <h3>Kiss</h3>
+                        <p>€19.70</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="metallica.jpg" alt="Portada album Metallica">
+                    <div class="album-details">
+                        <h3>Metallica</h3>
+                        <p>€17.60</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="deep purple.jpg" alt="Portada album Deep Purple">
+                    <div class="album-details">
+                        <h3>Deep Purple</h3>
+                        <p>€20.30</p>
+                    </div>
+                </div>
+                
+                <!-- Más discos -->
+            </div>
+        </div>
+
+        <div>
+            <h2 class="section-title">Pop</h2>
+            <div class="carousel">
+                <div class="album">
+                    <img src="sinatra.jpg" alt="Portada album Frank Sinatra">
+                    <div class="album-details">
+                        <h3>Frank Sinatra</h3>
+                        <p>€11.99</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="lady_gaga_artpop-portada.jpg" alt="Portada album Lady Gaga">
+                    <div class="album-details">
+                        <h3>Lady Gaga</h3>
+                        <p>€19.00</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="katy-perry-smile-1.jpg" alt="Portada album Katy Perry">
+                    <div class="album-details">
+                        <h3>Katy Perry</h3>
+                        <p>€22.80</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="britney.jpg" alt="DPortada album Britney Spears">
+                    <div class="album-details">
+                        <h3>Britney Spears</h3>
+                        <p>€19.00</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="madonna.jpg" alt="Portada album Madonna">
+                    <div class="album-details">
+                        <h3>Madonna</h3>
+                        <p>€18.90</p>
+                    </div>
+                </div>
+                <!-- Más discos -->
+            </div>
+        </div>
+
+        <div>
+            <h2 class="section-title">Clásicos</h2>
+            <div class="carousel">
+                <div class="album">
+                    <img src="beatles.jpg" alt="Portada album Los Beatles">
+                    <div class="album-details">
+                        <h3>Los Beatles</h3>
+                        <p>€12.99</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="prince.jpg" alt="Portada album Prince">
+                    <div class="album-details">
+                        <h3>Prince</h3>
+                        <p>€16.00</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="michael.jpg" alt="Portada album Michael Jackson">
+                    <div class="album-details">
+                        <h3>Mickael Jackson</h3>
+                        <p>€20.00</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="mark.jpeg" alt="Portada album Mark Knopfler">
+                    <div class="album-details">
+                        <h3>Mark Knopfler</h3>
+                        <p>€19.30</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="elton john.jpg" alt="Portada album Elton John">
+                    <div class="album-details">
+                        <h3>Elton John</h3>
+                        <p>€22.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Más discos -->
+        <div>
+            <h2 class="section-title">Otros</h2>
+            <div class="carousel">
+                <div class="album">
+                    <img src="loorena.jpg" alt="Portada album Loorena Mckennitt">
+                    <div class="album-details">
+                        <h3>Loorena Mckennitt</h3>
+                        <p>€21.99</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="enya.jpg" alt="Portada album Enya">
+                    <div class="album-details">
+                        <h3>Enya</h3>
+                        <p>€17.00</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="yanni.jpeg" alt="Portada album Yanni">
+                    <div class="album-details">
+                        <h3>Yanni</h3>
+                        <p>€15.00</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="grease.jpg" alt="DPortada album Grease">
+                    <div class="album-details">
+                        <h3>Grease</h3>
+                        <p>€16.90</p>
+                    </div>
+                </div>
+                <div class="album">
+                    <img src="supertramp.jpg" alt="Portada album Supertramp">
+                    <div class="album-details">
+                        <h3>Supertramp</h3>
+                        <p>€19.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/tu-pagina" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> | 
+            <a href="https://x.com/i/flow/login?lang=es" target="_blank"><i class="fab fa-twitter"></i> X</a> | <!-- Enlace a X -->
+            <a href="https://www.instagram.com/accounts/login/?next=%2Fhaoyii%2F&source=private_profile&locale=es_ES" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <p>&copy; 2024 Melodías Infinita. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

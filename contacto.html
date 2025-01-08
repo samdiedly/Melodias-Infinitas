@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #374151;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label, input, textarea {
+            font-size: 1.2rem;
+            margin: 0.5rem;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            width: 80%;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            background-color: #1e3a8a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #374151;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        footer .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        footer .socials a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        footer .socials a:hover {
+            color: #60a5fa;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e3a8a;
+        }
+
+    </style>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var asunto = document.getElementById("asunto").value;
+            var mensaje = document.getElementById("mensaje").value;
+
+            // Verificar que los campos no estén vacíos
+            if (nombre == "" || email == "" || asunto == "" || mensaje == "") {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            }
+
+            // Verificar que el email contenga un "@" y un punto "."
+            var regexEmail = /\S+@\S+\.\S+/;
+            if (!regexEmail.test(email)) {
+                alert("Por favor, ingresa un email válido.");
+                return false;
+            }
+
+            // Si todo es válido
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>
+            <a href="trabajo3.html">
+                <img src="logo2.jpeg" alt="Logo de Melodías Infinitas">
+            </a>
+            Melodías Infinitas
+        </h1>
+        <nav>
+            <a href="trabajo3.html">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+        </nav>
+    </header>
+
+    <!-- Formulario de Contacto -->
+    <div class="container">
+        <h2>Contacto</h2>
+        <form action="https://example.com/submit" method="POST" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/tu-pagina" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> | 
+            <a href="https://x.com/i/flow/login?lang=es" target="_blank"><i class="fab fa-twitter"></i> X</a> | <!-- Enlace a X -->
+            <a href="https://www.instagram.com/accounts/login/?next=%2Fhaoyii%2F&source=private_profile&locale=es_ES" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <p>&copy; 2024 Melodías Infinitas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

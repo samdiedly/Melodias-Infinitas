@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Disco</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #374151;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .disco-imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .disco-imagenes img {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .disco-detalles {
+            text-align: center;
+        }
+        .disco-detalles h1 {
+            color: #1e3a8a;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .disco-detalles p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        .disco-detalles .precio {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        .comprar {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        .comprar button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: #1e3a8a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .comprar button:hover {
+            background-color: #374151;
+        }
+        ol {
+            padding-left: 0;
+            list-style-type: none;
+        }
+        ol li {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+        ol li::before {
+            content: attr(data-numero);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        footer {
+            background-color: #1e293b;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        footer .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        footer .socials a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        footer .socials a:hover {
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>
+            <a href="#seccion-disco">
+                <img src="logo2.jpeg" alt="Logo">
+            </a>
+            Detalles del disco
+        </h1>
+        <nav>
+            <a href="trabajo3.html">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <!-- Contenido disco -->
+    <div class="container">
+        <div class="disco-imagenes">
+            <img src="beatles.jpg" alt="Portada del Disco">
+            <img src="contraportada beatles.PNG" alt="Contraportada del Disco">
+        </div>
+        <div class="disco-detalles">
+            <h1>Abbey Road</h1>
+            <p><strong>Artista:</strong> Los Beatles</p>
+            <p><strong>Estilo de Música:</strong> Rock Clásico</p>
+            <p><strong>Descripción:</strong> Edición especial por el 50 Aniversario de su publicación de «Abbey Road», undécimo trabajo de estudio de la banda británica de rock procedente de Liverpool The Beatles. Lanzado originalmente en 1969 por Apple Records, contiene las 17 canciones de la primera grabación remasterizadas por Giles Martin y Sam Okell.</p>
+            <ol><strong>Lista canciones:</strong>
+                <li data-numero="1">Come Together</li>
+                <li data-numero="2">Maxwell's Silver Hammer</li>
+                <li data-numero="3">Oh! Darling</li>
+                <li data-numero="4">Octopus's Garden</li>
+                <li data-numero="5">I Want You (She's So Heavy)</li>
+                <li data-numero="6">Here Comes The Sun</li>
+                <li data-numero="7">Because</li>
+                <li data-numero="8">You Never Give Me Your Money</li>
+                <li data-numero="9">Sun King</li>
+                <li data-numero="10">Mean Mr Mustard</li>
+                <li data-numero="11">Polythene Pam</li>
+                <li data-numero="12">She Came In Through The Bathroom Window</li>
+                <li data-numero="13">Golden Slumbers</li>
+                <li data-numero="14">Carry That Weight</li>
+                <li data-numero="15">The End</li>
+                <li data-numero="16">Her Majesty</li>
+                <li data-numero="17">Abbey Road</li>
+            </ol>
+
+            <p class="precio">€12.99</p>
+        </div>
+        <div class="comprar">
+            <button>Añadir al Carrito</button>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/tu-pagina" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> | 
+            <a href="https://x.com/i/flow/login?lang=es" target="_blank"><i class="fab fa-twitter"></i> X</a> | <!-- Enlace a X -->
+            <a href="https://www.instagram.com/accounts/login/?next=%2Fhaoyii%2F&source=private_profile&locale=es_ES" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        <p>&copy; 2024 Melodías Infinitas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

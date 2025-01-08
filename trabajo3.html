@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodías Infinitas</title>
+    <link rel="stylesheet" href="principal.css">
+    
+</head>
+<body>
+    <div class="logo-container"></div>
+    <header>
+        <h1>
+            <a href="trabajo3.html">
+                <img src="logo2.jpeg" alt="Logo de Melodías Infinitas">
+            </a>
+            Melodías Infinitas
+        </h1>
+         
+
+        <form id="search-form" style="display: flex; gap: 0.5rem;">
+          <input type="text" id="search-input" placeholder="Buscar producto..." />
+          <button type="button" id="search-button">Buscar</button>
+        </form>
+       
+  
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        
+    </header>
+
+    <div class="container" id="destacados">
+        <h1 class="section-title">Álbumes Destacados Oferta</h1>
+        <div class="albums">
+            <div class="album">
+                <a href="ejemplo.html">
+                    <img src="sinatra.jpg" alt="Portada album Frank Sinatra">
+                    <div class="album-details">
+                        <h2>Frank Sinatra</h2>
+                        <p>€11.99</p>
+                        
+                    </div>
+                </a>
+            </div>
+            <div class="album">
+                <a href="ejemplo1.html">
+                    <img src="beatles.jpg" alt="Portada album Los Beatles">
+                    <div class="album-details">
+                        <h2>Los Beatles</h2>
+                        <p>€12.99</p>
+                  
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="productos">
+        <h1 class="section-title">Lista de Discos</h1>
+        <div class="products-list">
+            <div class="product" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+                <a href="productos.html">
+                    <img src="europe.jpg" alt="Portada album Europe">
+                </a>
+                <div class="product-details" style="display: none;">
+                    <h2>Europe</h2>
+                    <p>€17.99</p>
+                    <p>Un clásico del rock europeo.</p>
+                </div>
+            </div>
+            <div class="product" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+                <a href="productos.html">
+                    <img src="supertramp.jpg" alt="Portada album Supertramp">
+                </a>
+                <div class="product-details" style="display: none;">
+                    <h2>Supertramp</h2>
+                    <p>€19.99</p>
+                    <p>Un viaje musical único por el jazz y el rock progresivo.</p>
+                </div>
+            </div>
+            <div class="product" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+                <a href="productos.html">
+                    <img src="iron maiden.jpg" alt="Portada album Iron Maiden">
+                </a>
+                <div class="product-details" style="display: none;">
+                    <h2>Iron Maiden</h2>
+                    <p>€18.99</p>
+                    <p>El legendario álbum de metal de la banda inglesa.</p>
+                </div>
+            </div>
+            <div class="product" onmouseover="mostrarDescripcion(this)" onmouseout="ocultarDescripcion(this)">
+                <a href="productos.html">
+                    <img src="loorena.jpg" alt="ÁPortada album Loorena Mckennitt">
+                </a>
+                <div class="product-details" style="display: none;">
+                    <h2>Loorena Mckennitt</h2>
+                    <p>€21.99</p>
+                    <p>Una combinación única de música celta y pop contemporáneo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="socials">
+          <a href="https://www.facebook.com/tu-pagina" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> | 
+          <a href="https://x.com/i/flow/login?lang=es" target="_blank"><i class="fab fa-twitter"></i> X</a> | <!-- Enlace a X -->
+          <a href="https://www.instagram.com/accounts/login/?next=%2Fhaoyii%2F&source=private_profile&locale=es_ES" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+      <p>&copy; 2024 Melodías Infinitas. Todos los derechos reservados.</p>
+  </footer>
+
+    <script>
+      // Función para mostrar la descripción al pasar el cursor
+      function mostrarDescripcion(product) {
+          const detalles = product.querySelector('.product-details');
+          detalles.style.display = 'block';
+      }
+
+      // Función para ocultar la descripción al quitar el cursor
+      function ocultarDescripcion(product) {
+          const detalles = product.querySelector('.product-details');
+          detalles.style.display = 'none';
+      }
+      // Lista de productos válidos para redirigir al catálogo
+    const catalogoProductos = [
+        "Iron Maiden", "Europe", "Kiss", "Metallica", "Deep Purple",
+        "Frank Sinatra", "Lady Gaga", "Katy Perry", "Britney Spears", "Madonna",
+        "Los Beatles", "Prince", "Mickael Jackson", "Mark Knopfler", "Elton John",
+        "Loorena Mckennitt", "Enya", "Yanni", "Grease", "Supertramp"
+    ];
+
+    // Función para manejar la búsqueda
+    document.getElementById("search-button").addEventListener("click", function () {
+        const query = document.getElementById("search-input").value.trim().toLowerCase();
+
+        // Busca coincidencias parciales en el catálogo
+        const encontrado = catalogoProductos.find(producto =>
+            producto.toLowerCase().includes(query)
+        );
+
+        if (encontrado) {
+            // Redirige al catálogo
+            window.location.href = "./productos.html";
+        } else {
+            // Mensaje de error si no se encuentra
+            alert("Producto no encontrado. Por favor, verifica el nombre.");
+        }
+    });
+      
+    </script>
+</body>
+</html>
